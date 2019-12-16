@@ -676,6 +676,9 @@ mmap64 (void *start, size_t len, int prot, int flags, int fd, off64_t offset)
   return result;
 }
 
+#ifndef MREMAP_FIXED
+#define MREMAP_FIXED 0
+#endif
 
 /* `mremap' replacement.  We do not have to keep track of the size since
    `munmap' will get it as a parameter.  */

@@ -83,9 +83,11 @@
 #define MS_INVALIDATE	2		/* Invalidate the caches.  */
 
 /* Flags for `mremap'.  */
+#if 0
 #ifdef __USE_GNU
 # define MREMAP_MAYMOVE	1		/* Mapping address may change.  */
 # define MREMAP_FIXED	2		/* Fifth argument sets new address.  */
+#endif
 #endif
 
 /* Flags for `mlockall' (can be OR'd together).  */
